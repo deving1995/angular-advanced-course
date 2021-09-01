@@ -1,29 +1,9 @@
-# README #
+# Angular Advanced Library Laboratory: Build Your Own Library #
+[Course Link](https://angular-university.io/course/angular-advanced-course)
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## What I've Learned ##
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Yarn is known to be faster, and may be more secure
+[NPM vs. Yarn](https://www.whitesourcesoftware.com/free-developer-tools/blog/npm-vs-yarn-which-should-you-choose/)
+* You can use ":host ::ng-deep" if you want component styles to cascade to all child elements of a component, but not to any other element on the page
+[More on :host, and ::ng-deep](https://blog.angular-university.io/angular-host-context/)
