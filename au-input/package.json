@@ -1,6 +1,6 @@
 {
-  "name": "au-input",
-  "version": "8.0.2",
+  "name": "devg95-au-course-au-input",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

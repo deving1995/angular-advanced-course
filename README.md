@@ -2,7 +2,6 @@
 [Course Link](https://angular-university.io/course/angular-advanced-course)
 
 ## What I've Learned ##
-
 * Yarn is known to be faster, and may be more secure
 [NPM vs. Yarn](https://www.whitesourcesoftware.com/free-developer-tools/blog/npm-vs-yarn-which-should-you-choose/)
 * You can use ":host ::ng-deep" if you want component styles to cascade to all child elements of a component, but not to any other element on the page
@@ -34,5 +33,12 @@
     * This tells the TestBed to perform data binding
     * Delaying change detection is intentional and useful, it gives the tester an opportunity to inspect and change the state of the component before Angular initiates data binding and calls lifecycle hooks
 
+## Publishing a Library to NPM ##
+* Create an account at [npmjs.com](npmjs.com)
+* Use `npm login` in a terminal to log in with the account created
+* If there are files you do not want included with the upload to npm (if not alreay ignored with .gitignore) create a file ".gitignore" at the root directory
+    * By default npm uses what is in ".gitignore"
+* Before publishing to npm the "name" field in package.json should be unique, or the name of an npm package you have authority to update
+* You can use `npm version major` to update the version number from say 1.0.0 to 2.0.0
 
-
+## Google Material Design Icons ##
