@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 
 import {HttpClientModule} from "@angular/common/http";
 import { AuInputModule } from './lib/au-input.module';
+import { AuMdInputComponent } from './lib/au-md-input/au-md-input.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuMdInputComponent
   ],
   imports: [
     BrowserModule,

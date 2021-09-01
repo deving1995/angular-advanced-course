@@ -10,6 +10,7 @@
 * When having alternate themes we want to declare them in the component in "styleUrls"
 * To confirm AOT (Ahead of Time Compilation) is supported run `ng serve --prod -aot`
     * AOT has been the default since Angular 9
+* Not encouraged to use O-O inheritance in Angular - prefer approach based on composition
 
 ## [Testing](https://angular.io/guide/testing) ##
 * You can add id properties to the elements you want to test
@@ -42,3 +43,4 @@
 * You can use `npm version major` to update the version number from say 1.0.0 to 2.0.0
 
 ## Google Material Design Icons ##
+* [Font Awesome vs Material Icons](https://www.barenakedcoder.com/blog/2020/03/font-awesome-material-icons/)
