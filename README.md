@@ -42,6 +42,8 @@
     * By default npm uses what is in ".gitignore"
 * Before publishing to npm the "name" field in package.json should be unique, or the name of an npm package you have authority to update
 * You can use `npm version major` to update the version number from say 1.0.0 to 2.0.0
+* `npm version patch` to go from say 1.00 to 1.0.1
+* `npm publish` to publish a component to npm
 
 ## Google Material Design Icons ##
 * [Font Awesome vs Material Icons](https://www.barenakedcoder.com/blog/2020/03/font-awesome-material-icons/)
