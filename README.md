@@ -33,6 +33,7 @@
 * For some elements that may not be processed by the time that element is tested you can use `fixture.detectChanges()`
     * This tells the TestBed to perform data binding
     * Delaying change detection is intentional and useful, it gives the tester an opportunity to inspect and change the state of the component before Angular initiates data binding and calls lifecycle hooks
+* `npm run integration` to run integration tests
 
 ## Publishing a Library to NPM ##
 * Create an account at [npmjs.com](npmjs.com)
