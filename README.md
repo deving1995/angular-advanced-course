@@ -10,3 +10,4 @@
 * @ContentChild looks for elements in the "Light DOM" while @ViewChild looks for elements in the "Shadow DOM"
 * When having alternate themes we want to declare them in the component in "styleUrls"
 * To confirm AOT (Ahead of Time Compilation) is supported run `ng serve --prod -aot`
+    * AOT has been the default since Angular 9
