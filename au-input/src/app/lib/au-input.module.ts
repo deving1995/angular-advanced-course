@@ -5,10 +5,10 @@ import { InputRefDirective } from './common/input-ref.directive';
 import { AuMdInputComponent } from './au-md-input/au-md-input.component';
 
 @NgModule({
-    declarations: [AuFaInputComponent, InputRefDirective],
+    declarations: [AuFaInputComponent, InputRefDirective, AuMdInputComponent],
     imports: [
         CommonModule
     ],
-    exports: [AuFaInputComponent, InputRefDirective]
+    exports: [AuFaInputComponent, InputRefDirective, AuMdInputComponent]
 })
 export class AuInputModule { }
