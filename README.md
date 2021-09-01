@@ -9,4 +9,4 @@
 [More on :host, and ::ng-deep](https://blog.angular-university.io/angular-host-context/)
 * @ContentChild looks for elements in the "Light DOM" while @ViewChild looks for elements in the "Shadow DOM"
 * When having alternate themes we want to declare them in the component in "styleUrls"
-* To confirm AOT (Ahead of Time Compilation) is supported run `{ ng serve --prod -aot }`
+* To confirm AOT (Ahead of Time Compilation) is supported run `ng serve --prod -aot`
