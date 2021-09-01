@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import {HttpClientModule} from "@angular/common/http";
+import { AuInputModule } from './lib/au-input.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
