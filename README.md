@@ -12,7 +12,7 @@
 * To confirm AOT (Ahead of Time Compilation) is supported run `ng serve --prod -aot`
     * AOT has been the default since Angular 9
 
-## Testing ##
+## [Testing](https://angular.io/guide/testing) ##
 * You can add id properties to the elements you want to test
 * You can use the class property to ensure that an element is being "projected" inside a component
 * "Jasmine sepecification" is scaffolded by Angular CLI initially
@@ -29,7 +29,10 @@
 * To ensure a functional specification is working we query the DOM of the running test application that is running in a headless browser
 * You can use "By.css()" for use with "DebugElement" query functions to check if an element exists
     * [More on "By"](https://angular.io/api/platform-browser/By)
-* To make test failures more readable we want to split expects into their own "it" functions
-* 
+* To make test failures more readable we want to split "expects" into their own "it" functions
+* For some elements that may not be processed by the time that element is tested you can use `fixture.detectChanges()`
+    * This tells the TestBed to perform data binding
+    * Delaying change detection is intentional and useful, it gives the tester an opportunity to inspect and change the state of the component before Angular initiates data binding and calls lifecycle hooks
+
 
 
