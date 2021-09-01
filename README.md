@@ -34,6 +34,12 @@
     * This tells the TestBed to perform data binding
     * Delaying change detection is intentional and useful, it gives the tester an opportunity to inspect and change the state of the component before Angular initiates data binding and calls lifecycle hooks
 * `npm run integration` to run integration tests
+* You can use expect(array.length).toBe(x) in testing to ensure the length of an array is what we expect
+
+## Best Practices ##
+* Use of "ng-template"
+* Use ternary operator HTML side for custom elements or default if not one provided through "@Input"
+* You can set the id of a component, and from a separate element can use the id to call a function of that component
 
 ## Publishing a Library to NPM ##
 * Create an account at [npmjs.com](npmjs.com)

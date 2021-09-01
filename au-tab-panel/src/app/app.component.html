@@ -5,8 +5,16 @@
 
 <div class="container">
 
-    <au-tab-panel>
-        <au-tab title="Login">
+    <ng-template #headerButtons>
+
+        <button (click)="tabPanel.selectTab(loginTab)">Login</button>
+        <button (click)="tabPanel.selectTab(signUpTab)">Sign Up</button>
+
+    </ng-template>
+
+    <au-tab-panel #tabPanel id="tab-panel">
+
+        <au-tab title="Login" #loginTab>
             <form>
                 <div class="form-field">
                     <label>Email:</label><input>
@@ -16,7 +24,8 @@
                 </div>
             </form>
         </au-tab>
-        <au-tab title="Sign Up">
+
+        <au-tab title="Sign Up" #signUpTab>
             <form>
                 <div class="form-field">
                     <label>Email:</label><input>
@@ -29,10 +38,11 @@
                 </div>
             </form>
         </au-tab>
-        <au-tab title="Contact">
+
+        <au-tab title="Contact" [selected]="true">
             <form>
                 <div class="form-field">
-                    <label>Email:</label><input>
+                    <label>Email:</label><input class="contact-email">
                 </div>
                 <div class="form-field">
                     <label>Message:</label>
@@ -40,17 +50,6 @@
                 </div>
             </form>
         </au-tab>
+        
     </au-tab-panel>
-
-    <div class="tab-panel">
-
-        <ul class="tab-panel-buttons">
-            <li class="selected">Login</li>
-            <li>Sign Up</li>
-            <li>Contact</li>
-        </ul>
-
-    </div>
-
-
 </div>
