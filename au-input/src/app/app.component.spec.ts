@@ -12,7 +12,6 @@ describe('AppComponent', () => {
         el: DebugElement,
         emailField: DebugElement;
 
-
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
@@ -22,7 +21,6 @@ describe('AppComponent', () => {
     }));
 
     beforeEach(() => {
-
         fixture = TestBed.createComponent(AppComponent);
         component = fixture.debugElement.componentInstance;
         el = fixture.debugElement;

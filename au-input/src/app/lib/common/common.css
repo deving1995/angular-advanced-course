@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -14,15 +15,37 @@
     border-width:1px;
     border-style: solid;
     padding: 1px 0;
+=======
+.icon {
+    width: 20px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 2px;
+    border: none;
+}
+
+:host {
+    border-width: 1px;
+    border-style: solid;
+    padding: 3px 0;
+>>>>>>> main
     display: inline-block;
 }
 
 :host(.input-focus) {
+<<<<<<< HEAD
     outline:none;
 }
 
 :host /deep/ input {
     border:none;
+=======
+    outline: none;
+}
+
+:host ::ng-deep input {
+    border: none;
+>>>>>>> main
     outline: none;
     height: 100%;
     margin: 1px 0;
