@@ -1,113 +1,55 @@
+# Angular Advanced Library Laboratory: Build Your Own Library #
+[Course Link](https://angular-university.io/course/angular-advanced-course)
 
-# Angular Advanced Library Laboratory Course
+## What I've Learned ##
+* Yarn is known to be faster, and may be more secure
+[NPM vs. Yarn](https://www.whitesourcesoftware.com/free-developer-tools/blog/npm-vs-yarn-which-should-you-choose/)
+* You can use ":host ::ng-deep" if you want component styles to cascade to all child elements of a component, but not to any other element on the page
+[More on :host, and ::ng-deep](https://blog.angular-university.io/angular-host-context/)
+* @ContentChild looks for elements in the "Light DOM" while @ViewChild looks for elements in the "Shadow DOM"
+* When having alternate themes we want to declare them in the component in "styleUrls"
+* To confirm AOT (Ahead of Time Compilation) is supported run `ng serve --prod -aot`
+    * AOT has been the default since Angular 9
+* Not encouraged to use O-O inheritance in Angular - prefer approach based on composition
 
-This repository contains the code of the [Angular Advanced Library Laboratory Course: Build Your Own Library](https://angular-university.io/course/angular-advanced-course).
+## [Testing](https://angular.io/guide/testing) ##
+* You can add id properties to the elements you want to test
+* You can use the class property to ensure that an element is being "projected" inside a component
+* "Jasmine sepecification" is scaffolded by Angular CLI initially
+* Jasmine is a test framework
+* Angular CLI is configured so that "beforeEach", and "it", are available globally
+* "describe" describes the test suite we are creating
+* "beforeEach" specifies what code gets executed before each individual test
+* "it" describes an individual test
+* The components we want to test should go in the declarations of the TestBed in beforEach
+* The "fixture" is the element that is going to allow us to test the component
+    * We can access "nativeElement", "debugElement", and more from "fixture"
+    * "fixture" = TestBed.createComponent(component);
+* Run `ng test` from root directory to run the test
+* To ensure a functional specification is working we query the DOM of the running test application that is running in a headless browser
+* You can use "By.css()" for use with "DebugElement" query functions to check if an element exists
+    * [More on "By"](https://angular.io/api/platform-browser/By)
+* To make test failures more readable we want to split "expects" into their own "it" functions
+* For some elements that may not be processed by the time that element is tested you can use `fixture.detectChanges()`
+    * This tells the TestBed to perform data binding
+    * Delaying change detection is intentional and useful, it gives the tester an opportunity to inspect and change the state of the component before Angular initiates data binding and calls lifecycle hooks
+* `npm run integration` to run integration tests
+* You can use expect(array.length).toBe(x) in testing to ensure the length of an array is what we expect
 
-This course repository is updated to Angular 4, there is a Yarn lock file available.
+## Best Practices ##
+* Use of "ng-template"
+* Use ternary operator HTML side for custom elements or default if not one provided through "@Input"
+* You can set the id of a component, and from a separate element can use the id to call a function of that component
 
-![Angular Advanced Library Laboratory Course: Build Your Own Library](https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png)
+## Publishing a Library to NPM ##
+* Create an account at [npmjs.com](npmjs.com)
+* Use `npm login` in a terminal to log in with the account created
+* If there are files you do not want included with the upload to npm (if not alreay ignored with .gitignore) create a file ".gitignore" at the root directory
+    * By default npm uses what is in ".gitignore"
+* Before publishing to npm the "name" field in package.json should be unique, or the name of an npm package you have authority to update
+* You can use `npm version major` to update the version number from say 1.0.0 to 2.0.0
+* `npm version patch` to go from say 1.00 to 1.0.1
+* `npm publish` to publish a component to npm
 
-
-# Installation pre-requisites
-
-For running this project we need and npm installed on our machine. These are some tutorials to install node in different operating systems:
-
-*Its important to install the latest version of Node*
-
-- [Install Node and NPM on Windows](https://www.youtube.com/watch?v=8ODS6RM6x7g)
-- [Install Node and NPM on Linux](https://www.youtube.com/watch?v=yUdHk-Dk_BY)
-- [Install Node and NPM on Mac](https://www.youtube.com/watch?v=Imj8PgG3bZU)
-
-
-# Installing the Angular CLI
-
-With the following command the angular-cli will be installed globally in your machine, as well as Yarn:
-
-    npm install -g @angular/cli yarn
-
-
-# How To install this repository
-
-We can install the master branch using the following commands:
-
-    git clone https://github.com/angular-university/angular-advanced-course.git
-    
-This repository is made of several separate npm modules, that are installable separately. For example, to run the au-input module, we can do the following:
-    
-    cd angular-advanced-course/au-input
-    yarn
-
-Its also possible to install the modules as usual using npm:
-
-    npm install 
-
-Yarn has the big advantage that if you use it you will be installing the exact same dependencies than I installed in my machine, so you wont run into issues caused by semantic versioning updates.
-
-This should take a couple of minutes. If there are issues, please post the complete error message in the Questions section of the course.
-
-# To Run the Development Server
-
-We can start the chat  application with the following command:
-
-    npm start
-
-  The application is visible at port 4200 - [http://localhost:4200](http://localhost:4200)
-
-# Installing branches other than master
-
-At certain points along the course, you will be asked to checkout other remote branches other than master. You can view all branches that you have available remotely using the following command:
-
-    git branch -a
-
-  The remote branches have their starting in origin, such as for example au-input.
-
-We can checkout the remote branch and start tracking it with a local branch that has the same name, by using the following command:
-
-      git checkout -b au-input origin/au-input
-
-
-# Other Courses
-
-## RxJs and Reactive Patterns Angular Architecture Course
-
-If you are looking for the RxJs and Reactive Patterns Angular Architecture Course code, the repo with the full code can be found here:
-
-[RxJs and Reactive Patterns Angular Architecture Course](https://angular-university.io/course/reactive-angular-architecture-course)
-
-![RxJs and Reactive Patterns Angular Architecture Course](https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png)
-
-
-
-## Angular Ngrx Reactive Extensions Architecture Course
-
-If you are looking for the Angular Ngrx Reactive Extensions Architecture Course code, the repo with the full code can be found here:
-
-[Angular Ngrx Reactive Extensions Architecture Course](https://angular-university.io/course/angular2-ngrx)
-
-[Github repo for this course](https://github.com/angular-university/ngrx-course)
-
-![Angular Ngrx Course](https://angular-academy.s3.amazonaws.com/thumbnails/ngrx-angular.png)
-
-
-
-## Angular 2 and Firebase - Build a Web Application Course
-
-If you are looking for the Angular 2 and Firebase - Build a Web Application Course code, the repo with the full code can be found here:
-
-[Angular 2 and Firebase - Build a Web Application](https://angular-university.io/course/build-an-application-with-angular2)
-
-[Github repo for this course](https://github.com/angular-university/angular-firebase-app)
-
-![Angular firebase course](https://angular-academy.s3.amazonaws.com/thumbnails/angular_app-firebase-small.jpg)
-
-
-## Complete Typescript 2 Course - Build A REST API
-
-If you are looking for the Complete Typescript 2 Course - Build a REST API, the repo with the full code can be found here:
-
-[https://angular-university.io/course/typescript-2-tutorial](https://github.com/angular-university/complete-typescript-course)
-
-[Github repo for this course](https://github.com/angular-university/complete-typescript-course)
-
-![Complete Typescript Course](https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png)
-
+## Google Material Design Icons ##
+* [Font Awesome vs Material Icons](https://www.barenakedcoder.com/blog/2020/03/font-awesome-material-icons/)
